@@ -7,6 +7,8 @@
     --LIGHT-SLATE: #8E8F99;
     --green: #31D0AA;
     --ocean: #404BBF;
+
+    --DAIRY:#FCFCFC;
 }
 
 body{
@@ -467,6 +469,27 @@ p{
     width: 264px;
 }
 
+/* MODAL CSS */
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content{
+    position: absolute;
+    width: 528px;
+    height: 580px;
+    background: var(--DAIRY);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+}
 
 /*Portfolio Design*/
 .filter-buttons{
@@ -540,6 +563,38 @@ p{
     border-top: 0;
     margin-bottom: 48px;
 }
-.substrate:hover{
+
+
+.img-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.img-wrapper > .content{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 40px 32px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    color: var(--cloud);
+    background-color: rgba(77, 90, 229,0.5);
+    height: 100%;
+    text-align: left;
+    transform: translateY(100%);
+    transition: transform 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+
+.img-wrapper:hover .content{
+    opacity: 1;
+    transform: translateY(0);
+}
+.body-images:hover .substrate{
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
