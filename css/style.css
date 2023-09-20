@@ -107,13 +107,33 @@ p{
     font-weight: 500;
     letter-spacing: 0.32px;
     line-height: 1.5;
+    position: relative;
 }
 
 
 
 .main-header-nav-address-link{
     list-style: none;
+    position: relative;
 }
+
+.main-header-nav-address-link::after, .main-header-nav-link::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: -27px;
+    width: 0%;
+    background-color: var(--ocean);
+    height: 4px;
+    border-radius: 2px;
+    transition: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-header-nav-address-link:hover::after, .main-header-nav-link:hover::after{
+    width: 100%;
+}
+
 
 .main-header-nav-address{
     width: 153px;
@@ -480,6 +500,11 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: auto;
+    opacity: 1;
+    transition-property: visibility, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-content{
@@ -487,9 +512,41 @@ p{
     width: 528px;
     height: 580px;
     background: var(--DAIRY);
+    border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-
+    transform: none;
+    transition: transform 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+.modal.is-hidden{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.is.hidden .modal-content{
+    transform: scale(0.5);
+}
+
+.modal-close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    stroke: rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 50%;
+    background-color: var(--cornflower);
+    cursor: pointer;
+}
+
+
 
 /*Portfolio Design*/
 .filter-buttons{
@@ -581,7 +638,7 @@ p{
     line-height: 1.5;
     letter-spacing: 0.32px;
     color: var(--cloud);
-    background-color: rgba(77, 90, 229,0.5);
+    background-color: rgba(77, 90, 229,0.8);
     height: 100%;
     text-align: left;
     transform: translateY(100%);
