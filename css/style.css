@@ -117,9 +117,11 @@ p{
     position: relative;
 }
 
+/* HEADER LINKS ANIMATION */
 .main-header-nav-address-link::after, .main-header-nav-link::after{
     content: "";
     position: absolute;
+    display: block;
     left:0;
     bottom: -27px;
     width: 0%;
@@ -553,6 +555,10 @@ p{
     cursor: pointer;
 }
 
+.modal-close:hover,.modal-close:focus{
+    background-color: var(--ocean);
+}
+
 
 
 /*Portfolio Design*/
@@ -626,6 +632,7 @@ p{
     background: var(--white);
     border-top: 0;
     margin-bottom: 48px;
+
 }
 
 
@@ -634,11 +641,17 @@ p{
     overflow: hidden;
 }
 
+.img-wrapper img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .img-wrapper > .content{
     position: absolute;
     top:0;
     left: 0;
-    padding: 40px 32px;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
@@ -648,6 +661,9 @@ p{
     background-color: rgba(77, 90, 229,0.8);
     height: 100%;
     text-align: left;
+    align-items: center;
+    padding: 0 24px;
+    display: flex;
     transform: translateY(100%);
     transition: transform 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -659,6 +675,9 @@ p{
     opacity: 1;
     transform: translateY(0);
 }
+
 .body-images:hover .substrate{
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
+
