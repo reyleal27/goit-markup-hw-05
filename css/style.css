@@ -392,7 +392,7 @@ p{
 
 .our-team-link-item:hover {
     color: var(--cloud);
-    background-color: #31D0AA;
+    background-color: var(--ocean);
     cursor: pointer;
 }
 
@@ -487,6 +487,13 @@ p{
     line-height: 1.5;
     letter-spacing: 0.32px;
     width: 264px;
+}
+
+
+.social-media-footer .our-team-link-item:hover {
+    color: var(--cloud);
+    background-color: var(--green);
+    cursor: pointer;
 }
 
 /* MODAL CSS */
