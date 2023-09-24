@@ -539,7 +539,7 @@ p{
 }
 
 .modal.is-hidden .modal-content{
-    transform: translateY(-5%);
+    transform: scale(0.5);
 }
 
 .modal-content{
