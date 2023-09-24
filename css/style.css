@@ -7,7 +7,6 @@
     --LIGHT-SLATE: #8E8F99;
     --green: #31D0AA;
     --ocean: #404BBF;
-
     --DAIRY:#FCFCFC;
 }
 
@@ -175,7 +174,7 @@ p{
 /*HERO SECTION*/
 
 .hero-section { 
-    background-image: linear-gradient(rgba(46,46,46,0.7),rgba(46,47,46,0.7)),url(/images/hero/background.jpg);
+    background-image: linear-gradient(rgba(46,46,46,0.7),rgba(46,47,46,0.7)),url(../images/hero/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
