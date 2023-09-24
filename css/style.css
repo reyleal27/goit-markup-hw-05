@@ -389,6 +389,9 @@ p{
     height: 40px;
     background-color: var(--secondary-color);
     border-radius: 50%;
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-team-link-item svg{
@@ -433,7 +436,6 @@ p{
     align-items: center;
     justify-content: center;
     list-style: none;
-   
 }
 
 .company-icon{
@@ -443,6 +445,9 @@ p{
     fill: var(--LIGHT-SLATE);
     border: 1px solid var(--LIGHT-SLATE);
     border-radius: 4px;
+    transition-property: fill, border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-icon:hover {
@@ -498,7 +503,11 @@ p{
     width: 264px;
 }
 
-
+.social-media-footer .our-team-link-item{
+    transition-property: color,background-color;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1) ;
+}
 .social-media-footer .our-team-link-item:hover {
     color: var(--cloud);
     background-color: var(--green);
@@ -529,7 +538,7 @@ p{
     pointer-events: none;
 }
 
-.modal.is.hidden .modal-content{
+.modal.is-hidden .modal-content{
     transform: scale(0.5);
 }
 
@@ -541,10 +550,10 @@ p{
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     transform:none;
-    transition:tranform 250ms;
+    transition-property:tranform;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 
 .modal-close{
@@ -561,6 +570,8 @@ p{
     border-radius: 50%;
     background-color: var(--cornflower);
     cursor: pointer;
+    transition:background-color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,.modal-close:focus{
@@ -592,7 +603,9 @@ p{
     padding: 12px 24px;
     border-radius: 4px;
     background-color:var(--cloud);
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+    transition-property: color, background-color,box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -601,6 +614,7 @@ p{
     background-color: var(--secondary-color);
     cursor: pointer;
     outline: transparent;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 
